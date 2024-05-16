@@ -1,0 +1,9 @@
+1 Run:
+docker login  -u 3lm1ll3r
+
+dckr_pat_wVTGQGdzHarXJKLRIHyZ4OCR8bQ
+
+
+
+
+ 
