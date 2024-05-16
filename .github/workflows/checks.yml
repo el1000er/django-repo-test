@@ -11,16 +11,20 @@ jobs:
     runs-on: ubuntu-20.04
     # ubuntu-20.04 has docker compose pre installed
     steps:
-      - name: Login to Docker Hub
+      -
+        name: Login to Docker Hub
         uses: docker/login-action@v1
         # login-action is officially provided by docker
         with:
           username: ${{secrets.DOCKERHUB_USER}}
           password: ${{secrets.DOCKERHUB_TOKEN}}
-      - name: Checkout
+      -
+        name: Checkout
         #github action that checks out code inside github action job
         uses: actions/checkout@v2
-      - name: Test
+      -
+        name: Test
         run: docker-compose run --rm  app sh -c "python manage.py test"
-      - name: Lint
+      -
+        name: Lint
         run: docker-compose run --rm app sh -c "flake8"
